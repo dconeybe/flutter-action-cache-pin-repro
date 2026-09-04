@@ -1,0 +1,14 @@
+on:
+  workflow_dispatch:
+  pull_request:
+
+jobs:
+  flutter-action:
+    continue-on-error: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2.23.0
+        with:
+          channel: stable
+          flutter-version: 3.47.1
